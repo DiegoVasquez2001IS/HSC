@@ -53,3 +53,9 @@ C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\Interop.AcroPDFLib.dll
 C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\Finanzas.pdb
 C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\CapaLogicaFinanzas.pdb
 C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\CapaDatosFinanzas.pdb
+C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\Recursos Humanos.dll
+C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\CapaLogica_RRHH.dll
+C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\CapaDatos_RRHH.dll
+C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\Recursos Humanos.pdb
+C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\CapaLogica_RRHH.pdb
+C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\CapaDatos_RRHH.pdb
