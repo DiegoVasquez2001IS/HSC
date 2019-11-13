@@ -1,0 +1,8 @@
+C:\Users\Allan Letona\Desktop\ModuloFinanzas\CapaLogicaFinanzas\bin\Debug\CapaLogicaFinanzas.dll
+C:\Users\Allan Letona\Desktop\ModuloFinanzas\CapaLogicaFinanzas\bin\Debug\CapaLogicaFinanzas.pdb
+C:\Users\Allan Letona\Desktop\ModuloFinanzas\CapaLogicaFinanzas\bin\Debug\CapaDatosFinanzas.dll
+C:\Users\Allan Letona\Desktop\ModuloFinanzas\CapaLogicaFinanzas\bin\Debug\CapaDatosFinanzas.pdb
+C:\Users\Allan Letona\Desktop\ModuloFinanzas\CapaLogicaFinanzas\obj\Debug\CapaLogicaFinanzas.csprojAssemblyReference.cache
+C:\Users\Allan Letona\Desktop\ModuloFinanzas\CapaLogicaFinanzas\obj\Debug\CapaLogicaFinanzas.csproj.CopyComplete
+C:\Users\Allan Letona\Desktop\ModuloFinanzas\CapaLogicaFinanzas\obj\Debug\CapaLogicaFinanzas.dll
+C:\Users\Allan Letona\Desktop\ModuloFinanzas\CapaLogicaFinanzas\obj\Debug\CapaLogicaFinanzas.pdb
