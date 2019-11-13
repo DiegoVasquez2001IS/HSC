@@ -1,0 +1,5 @@
+C:\Users\Allan Letona\Desktop\ModuloFinanzas\CapaDatosFinanzas\bin\Debug\CapaDatosFinanzas.dll
+C:\Users\Allan Letona\Desktop\ModuloFinanzas\CapaDatosFinanzas\bin\Debug\CapaDatosFinanzas.pdb
+C:\Users\Allan Letona\Desktop\ModuloFinanzas\CapaDatosFinanzas\obj\Debug\CapaDatosFinanzas.csprojAssemblyReference.cache
+C:\Users\Allan Letona\Desktop\ModuloFinanzas\CapaDatosFinanzas\obj\Debug\CapaDatosFinanzas.dll
+C:\Users\Allan Letona\Desktop\ModuloFinanzas\CapaDatosFinanzas\obj\Debug\CapaDatosFinanzas.pdb
