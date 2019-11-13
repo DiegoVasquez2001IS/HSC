@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDeDiseno; //Reportes y ayuda
 using CapaDiseno; // Seguridad
+using Finanzas;
 
 namespace HSC
 {
@@ -134,6 +135,23 @@ namespace HSC
 		{
 			MDI_Seguridad seguridad = new MDI_Seguridad("MiUsuario");
 			seguridad.ShowDialog();
+		}
+
+		private void FinanzasToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void ContabilidadToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			MDI_Contabilidad conta = new MDI_Contabilidad();
+			conta.Show();
+		}
+
+		private void BancosToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			MDI_Bancos bancos = new MDI_Bancos();
+			bancos.Show();
 		}
 	}
 }

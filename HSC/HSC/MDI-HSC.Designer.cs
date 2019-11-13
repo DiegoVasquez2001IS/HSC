@@ -85,7 +85,7 @@
 			// salirToolStripMenuItem
 			// 
 			this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-			this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.salirToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
 			this.salirToolStripMenuItem.Text = "Salir";
 			this.salirToolStripMenuItem.Click += new System.EventHandler(this.SalirToolStripMenuItem_Click);
 			// 
@@ -103,18 +103,21 @@
 			this.finanzasToolStripMenuItem.Name = "finanzasToolStripMenuItem";
 			this.finanzasToolStripMenuItem.Size = new System.Drawing.Size(82, 22);
 			this.finanzasToolStripMenuItem.Text = "Finanzas";
+			this.finanzasToolStripMenuItem.Click += new System.EventHandler(this.FinanzasToolStripMenuItem_Click);
 			// 
 			// contabilidadToolStripMenuItem
 			// 
 			this.contabilidadToolStripMenuItem.Name = "contabilidadToolStripMenuItem";
-			this.contabilidadToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+			this.contabilidadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.contabilidadToolStripMenuItem.Text = "Contabilidad";
+			this.contabilidadToolStripMenuItem.Click += new System.EventHandler(this.ContabilidadToolStripMenuItem_Click);
 			// 
 			// bancosToolStripMenuItem
 			// 
 			this.bancosToolStripMenuItem.Name = "bancosToolStripMenuItem";
-			this.bancosToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+			this.bancosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.bancosToolStripMenuItem.Text = "Bancos";
+			this.bancosToolStripMenuItem.Click += new System.EventHandler(this.BancosToolStripMenuItem_Click);
 			// 
 			// comprasToolStripMenuItem
 			// 
