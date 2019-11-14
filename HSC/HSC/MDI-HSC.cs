@@ -13,6 +13,7 @@ using Finanzas;
 using Recursos_Humanos;
 using MDI_Ventas; // ventas
 using MDI_CuentasPorCobrar; // CXC
+using Hoteleria;
 
 namespace HSC
 {
@@ -178,6 +179,12 @@ namespace HSC
 		{
 			MDI_CuentasPorCobrar.Form1 cxp = new MDI_CuentasPorCobrar.Form1();
 			cxp.Show();
+		}
+
+		private void HoteleríaToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			frm_mdi hotel = new frm_mdi();
+			hotel.Show();
 		}
 	}
 }
