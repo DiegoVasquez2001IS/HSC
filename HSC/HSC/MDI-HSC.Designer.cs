@@ -176,6 +176,7 @@
 			this.inventariosToolStripMenuItem.Name = "inventariosToolStripMenuItem";
 			this.inventariosToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
 			this.inventariosToolStripMenuItem.Text = "Inventarios";
+			this.inventariosToolStripMenuItem.Click += new System.EventHandler(this.InventariosToolStripMenuItem_Click);
 			// 
 			// toolsMenu
 			// 

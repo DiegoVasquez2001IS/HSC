@@ -14,6 +14,7 @@ using Recursos_Humanos;
 using MDI_Ventas; // ventas
 using MDI_CuentasPorCobrar; // CXC
 using Hoteleria;
+using MODULO; //Inventarios
 
 namespace HSC
 {
@@ -185,6 +186,12 @@ namespace HSC
 		{
 			frm_mdi hotel = new frm_mdi();
 			hotel.Show();
+		}
+
+		private void InventariosToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Frm_MdiInventario inventario = new Frm_MdiInventario();
+			inventario.Show();
 		}
 	}
 }
