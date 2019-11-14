@@ -65,3 +65,9 @@ C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\MDI_CuentasPorCobrar.dll
 C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\MDI_CuentasPorCobrar.pdb
 C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\Hoteleria.dll
 C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\Hoteleria.pdb
+C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\MODULO.dll
+C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\MODULO.pdb
+C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\CapaDisenoInventario.dll
+C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\MODULO.dll.config
+C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\CapaDisenoInventario.pdb
+C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\aa-ER\CapaDisenoInventario.resources.dll
