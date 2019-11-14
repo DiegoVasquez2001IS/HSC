@@ -59,3 +59,7 @@ C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\CapaDatos_RRHH.dll
 C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\Recursos Humanos.pdb
 C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\CapaLogica_RRHH.pdb
 C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\CapaDatos_RRHH.pdb
+C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\MDI_Ventas.dll
+C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\MDI_Ventas.pdb
+C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\MDI_CuentasPorCobrar.dll
+C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\MDI_CuentasPorCobrar.pdb
