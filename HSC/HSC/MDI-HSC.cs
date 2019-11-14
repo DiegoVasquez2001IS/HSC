@@ -11,6 +11,8 @@ using CapaDeDiseno; //Reportes y ayuda
 using CapaDiseno; // Seguridad
 using Finanzas;
 using Recursos_Humanos;
+using MDI_Ventas; // ventas
+using MDI_CuentasPorCobrar; // CXC
 
 namespace HSC
 {
@@ -164,6 +166,18 @@ namespace HSC
 		private void AyudaToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			Help.ShowHelp(this, " AyudaG/AyudaG.chm", "DMI.html");
+		}
+
+		private void VentasToolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			MDI_Ventas.Form1 venta = new MDI_Ventas.Form1();
+			venta.Show();
+		}
+
+		private void CuentasPorCobrarToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			MDI_CuentasPorCobrar.Form1 cxp = new MDI_CuentasPorCobrar.Form1();
+			cxp.Show();
 		}
 	}
 }

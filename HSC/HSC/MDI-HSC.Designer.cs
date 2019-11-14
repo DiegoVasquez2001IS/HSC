@@ -154,12 +154,14 @@
 			this.ventasToolStripMenuItem1.Name = "ventasToolStripMenuItem1";
 			this.ventasToolStripMenuItem1.Size = new System.Drawing.Size(221, 22);
 			this.ventasToolStripMenuItem1.Text = "Ventas";
+			this.ventasToolStripMenuItem1.Click += new System.EventHandler(this.VentasToolStripMenuItem1_Click);
 			// 
 			// cuentasPorCobrarToolStripMenuItem
 			// 
 			this.cuentasPorCobrarToolStripMenuItem.Name = "cuentasPorCobrarToolStripMenuItem";
 			this.cuentasPorCobrarToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
 			this.cuentasPorCobrarToolStripMenuItem.Text = "Cuentas por Cobrar";
+			this.cuentasPorCobrarToolStripMenuItem.Click += new System.EventHandler(this.CuentasPorCobrarToolStripMenuItem_Click);
 			// 
 			// rRHHToolStripMenuItem
 			// 

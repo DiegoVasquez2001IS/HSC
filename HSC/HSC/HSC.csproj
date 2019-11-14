@@ -45,6 +45,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Dll\ModuloFinanzas\Finanzas\bin\Debug\Finanzas.dll</HintPath>
     </Reference>
+    <Reference Include="MDI_CuentasPorCobrar">
+      <HintPath>..\Dll\DLL Ventas y Cuentas por Cobrar\MDI_CuentasPorCobrar.dll</HintPath>
+    </Reference>
+    <Reference Include="MDI_Ventas">
+      <HintPath>..\Dll\DLL Ventas y Cuentas por Cobrar\MDI_Ventas.dll</HintPath>
+    </Reference>
     <Reference Include="Recursos Humanos">
       <HintPath>..\Dll\Recursos Humanos\Recursos Humanos\bin\Debug\Recursos Humanos.dll</HintPath>
     </Reference>
