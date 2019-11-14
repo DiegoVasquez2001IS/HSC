@@ -160,5 +160,10 @@ namespace HSC
 			MDI_RRHH rh = new MDI_RRHH();
 			rh.Show();
 		}
+
+		private void AyudaToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Help.ShowHelp(this, " AyudaG/AyudaG.chm", "DMI.html");
+		}
 	}
 }

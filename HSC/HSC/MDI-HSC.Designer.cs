@@ -210,6 +210,7 @@
 			this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
 			this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(69, 22);
 			this.ayudaToolStripMenuItem.Text = "Ayuda";
+			this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.AyudaToolStripMenuItem_Click);
 			// 
 			// MDIParent1
 			// 
