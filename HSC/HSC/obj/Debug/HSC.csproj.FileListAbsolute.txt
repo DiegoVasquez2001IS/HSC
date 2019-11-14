@@ -63,3 +63,5 @@ C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\MDI_Ventas.dll
 C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\MDI_Ventas.pdb
 C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\MDI_CuentasPorCobrar.dll
 C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\MDI_CuentasPorCobrar.pdb
+C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\Hoteleria.dll
+C:\Users\gganp\Desktop\HSC\HSC\HSC\bin\Debug\Hoteleria.pdb

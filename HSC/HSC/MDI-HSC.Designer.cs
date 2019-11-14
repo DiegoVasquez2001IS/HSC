@@ -94,6 +94,7 @@
 			this.hoteleríaToolStripMenuItem.Name = "hoteleríaToolStripMenuItem";
 			this.hoteleríaToolStripMenuItem.Size = new System.Drawing.Size(87, 22);
 			this.hoteleríaToolStripMenuItem.Text = "Hotelería";
+			this.hoteleríaToolStripMenuItem.Click += new System.EventHandler(this.HoteleríaToolStripMenuItem_Click);
 			// 
 			// finanzasToolStripMenuItem
 			// 
