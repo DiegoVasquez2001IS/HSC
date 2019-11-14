@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CapaDeDiseno; //Reportes y ayuda
 using CapaDiseno; // Seguridad
 using Finanzas;
+using Recursos_Humanos;
 
 namespace HSC
 {
@@ -152,6 +153,17 @@ namespace HSC
 		{
 			MDI_Bancos bancos = new MDI_Bancos();
 			bancos.Show();
+		}
+
+		private void RRHHToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			MDI_RRHH rh = new MDI_RRHH();
+			rh.Show();
+		}
+
+		private void AyudaToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Help.ShowHelp(this, " AyudaG/AyudaG.chm", "DMI.html");
 		}
 	}
 }

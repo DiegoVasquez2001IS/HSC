@@ -108,14 +108,14 @@
 			// contabilidadToolStripMenuItem
 			// 
 			this.contabilidadToolStripMenuItem.Name = "contabilidadToolStripMenuItem";
-			this.contabilidadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.contabilidadToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
 			this.contabilidadToolStripMenuItem.Text = "Contabilidad";
 			this.contabilidadToolStripMenuItem.Click += new System.EventHandler(this.ContabilidadToolStripMenuItem_Click);
 			// 
 			// bancosToolStripMenuItem
 			// 
 			this.bancosToolStripMenuItem.Name = "bancosToolStripMenuItem";
-			this.bancosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.bancosToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
 			this.bancosToolStripMenuItem.Text = "Bancos";
 			this.bancosToolStripMenuItem.Click += new System.EventHandler(this.BancosToolStripMenuItem_Click);
 			// 
@@ -166,6 +166,7 @@
 			this.rRHHToolStripMenuItem.Name = "rRHHToolStripMenuItem";
 			this.rRHHToolStripMenuItem.Size = new System.Drawing.Size(58, 22);
 			this.rRHHToolStripMenuItem.Text = "RRHH";
+			this.rRHHToolStripMenuItem.Click += new System.EventHandler(this.RRHHToolStripMenuItem_Click);
 			// 
 			// inventariosToolStripMenuItem
 			// 
@@ -209,6 +210,7 @@
 			this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
 			this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(69, 22);
 			this.ayudaToolStripMenuItem.Text = "Ayuda";
+			this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.AyudaToolStripMenuItem_Click);
 			// 
 			// MDIParent1
 			// 
