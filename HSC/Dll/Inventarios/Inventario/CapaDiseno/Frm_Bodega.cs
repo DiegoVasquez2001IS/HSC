@@ -23,7 +23,7 @@ namespace CapaDisenoInventario
             navegador1.asignarTabla("tbl_bodega");
             String[] alias = { "Código", "Sucursal", "Nombre", "Descripción", "Dirección", "Stock Máximo", "Stock Mínimo", "Status", "Estado" };
             navegador1.asignarAlias(alias);
-            navegador1.asignarAyuda("1");
+            navegador1.asignarAyuda("7");
             navegador1.asignarSalida(this);
             navegador1.asignarColorFondo(ColorTranslator.FromHtml("#C05640"));
             navegador1.asignarColorFuente(Color.Black);

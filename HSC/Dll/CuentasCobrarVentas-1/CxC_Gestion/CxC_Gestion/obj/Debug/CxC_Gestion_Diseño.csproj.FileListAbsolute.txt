@@ -1,0 +1,13 @@
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ANÁLISIS DE SISTEMAS 2\CxC_Gestion\CxC_Gestion\obj\Debug\CxC_Gestion_Diseño.csprojAssemblyReference.cache
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ANÁLISIS DE SISTEMAS 2\CxC_Gestion\CxC_Gestion\obj\Debug\CxC_Gestion.CxC_gestion.resources
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ANÁLISIS DE SISTEMAS 2\CxC_Gestion\CxC_Gestion\obj\Debug\CxC_Gestion.Properties.Resources.resources
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ANÁLISIS DE SISTEMAS 2\CxC_Gestion\CxC_Gestion\obj\Debug\CxC_Gestion_Diseño.csproj.GenerateResource.cache
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ANÁLISIS DE SISTEMAS 2\CxC_Gestion\CxC_Gestion\bin\Debug\CxC_Gestion.dll
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ANÁLISIS DE SISTEMAS 2\CxC_Gestion\CxC_Gestion\bin\Debug\CxC_Gestion.pdb
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ANÁLISIS DE SISTEMAS 2\CxC_Gestion\CxC_Gestion\bin\Debug\CxC_Gestion_Logica.dll
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ANÁLISIS DE SISTEMAS 2\CxC_Gestion\CxC_Gestion\bin\Debug\CxC_Gestion_Datos.dll
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ANÁLISIS DE SISTEMAS 2\CxC_Gestion\CxC_Gestion\bin\Debug\CxC_Gestion_Logica.pdb
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ANÁLISIS DE SISTEMAS 2\CxC_Gestion\CxC_Gestion\bin\Debug\CxC_Gestion_Datos.pdb
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ANÁLISIS DE SISTEMAS 2\CxC_Gestion\CxC_Gestion\obj\Debug\CxC_Gestion_Diseño.csproj.CopyComplete
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ANÁLISIS DE SISTEMAS 2\CxC_Gestion\CxC_Gestion\obj\Debug\CxC_Gestion.dll
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ANÁLISIS DE SISTEMAS 2\CxC_Gestion\CxC_Gestion\obj\Debug\CxC_Gestion.pdb

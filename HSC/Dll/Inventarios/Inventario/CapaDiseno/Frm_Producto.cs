@@ -12,8 +12,7 @@ namespace CapaDisenoInventario
         public Frm_Producto(String usuario, String aplicacion)
         {
             InitializeComponent();
-			navegador1.asignarComboConTabla("tbl_tipoproducto", "tipo_tipoproducto", 1);
-			this.StartPosition = FormStartPosition.CenterScreen;
+            this.StartPosition = FormStartPosition.CenterScreen;
             this.usuario = usuario;
             this.aplicacion = aplicacion;
             inicio();
@@ -22,16 +21,15 @@ namespace CapaDisenoInventario
         private void inicio()
         {
             navegador1.asignarTabla("tbl_producto");
-            String[] alias = { "Código", "Tipo Producto", "Nombre", "Descripción", "Estado" };
+            String[] alias = { "Código", "Tipo Producto", "Nombre", "Descripción", "Cantidad", "Precio", "Estado" };
             navegador1.asignarAlias(alias);
             navegador1.asignarAyuda("1");
             navegador1.asignarSalida(this);
-
-			navegador1.asignarColorFondo(ColorTranslator.FromHtml("#C05640"));
+            navegador1.asignarColorFondo(ColorTranslator.FromHtml("#C05640"));
             navegador1.asignarColorFuente(Color.Black);
             navegador1.asignarNombreForm("Producto");
             //Asociaciones
-
+            navegador1.asignarComboConTabla("Tbl_TipoProducto", "tipo_tipoproducto", 1);
         }
 
         private void navegador1_Load(object sender, EventArgs e)
@@ -39,6 +37,11 @@ namespace CapaDisenoInventario
             navegador1.ObtenerIdUsuario(usuario);
             navegador1.ObtenerIdAplicacion(aplicacion);
             navegador1.botonesYPermisosInicial(usuario, aplicacion);
+        }
+
+        private void Frm_Producto_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
