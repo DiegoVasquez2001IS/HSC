@@ -22,6 +22,7 @@ namespace Facturacion
         List<int> listaClientes = new List<int>();
         List<int> listaProductos = new List<int>();
         string iddCotizacion = "NULL";
+        int cantidadProducto = 0;
         public CU_Pedido()
         {
             InitializeComponent();
@@ -374,7 +375,7 @@ namespace Facturacion
         {
             if (!String.IsNullOrEmpty(listaProductos.ElementAt(Cbo_codProducto.SelectedIndex).ToString()))
             {
-                bcliente = logicaConsulta.obtenerProducto(listaProductos.ElementAt(Cbo_codProducto.SelectedIndex).ToString(), Txt_nombreProducto, Txt_descProducto);
+                bcliente = logicaConsulta.obtenerProducto(listaProductos.ElementAt(Cbo_codProducto.SelectedIndex).ToString(), Txt_nombreProducto, Txt_descProducto,cantidadProducto,Txt_precioProducto);
             }
             else
             {

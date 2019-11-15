@@ -50,7 +50,7 @@ namespace CapaDatos_Facturacion
         {
             Conexion conexion = new Conexion();
             conexion.Conectar();
-            string sConsulta = "SELECT KidImpuesto,nombre_impuesto FROM tbl_impuesto WHERE estado = 1";
+            string sConsulta = "SELECT KidImpuesto,nombre_impuesto,porcentaje_impuesto FROM tbl_impuesto WHERE estado = 1";
             OdbcDataAdapter data = new OdbcDataAdapter(sConsulta, conexion.Conectar());
             return data;
         }
@@ -95,7 +95,7 @@ namespace CapaDatos_Facturacion
         {
             Conexion conexion = new Conexion();
             conexion.Conectar();
-            string sConsulta = "SELECT nombre_producto,descripcion_producto FROM tbl_producto WHERE KidProducto = " + sIdProducto;
+            string sConsulta = "SELECT nombre_producto,descripcion_producto,cantidad,precio FROM tbl_producto WHERE KidProducto = " + sIdProducto;
             OdbcDataAdapter data = new OdbcDataAdapter(sConsulta, conexion.Conectar());
             return data;
         }
@@ -386,6 +386,33 @@ namespace CapaDatos_Facturacion
             Conexion conexion = new Conexion();
             conexion.Conectar();
             string sConsulta = "SELECT KidEncabezadoPedido,CONCAT(KidEncabezadoPedido,' - ',fecha_encabezadopedido) AS nombre FROM tbl_encabezadopedido";
+            OdbcDataAdapter data = new OdbcDataAdapter(sConsulta, conexion.Conectar());
+            return data;
+        }
+
+        public OdbcCommand disminuirInventario(string idProducto, string cantidad)
+        {
+            Conexion conexion = new Conexion();
+            OdbcCommand command = new OdbcCommand();
+            command.Connection = conexion.Conectar();
+            command.CommandText = "UPDATE tbl_producto SET cantidad = cantidad -" + cantidad + " WHERE KidProducto = " + idProducto;
+            return command;
+        }
+
+        public OdbcCommand aumentarInventario(string idProducto)
+        {
+            Conexion conexion = new Conexion();
+            OdbcCommand command = new OdbcCommand();
+            command.Connection = conexion.Conectar();
+            command.CommandText = "UPDATE tbl_producto SET cantidad = cantidad + 1 WHERE KidProducto = " + idProducto;
+            return command;
+        }
+
+        public OdbcDataAdapter obtenerCantidadProducto(string sIdProducto)
+        {
+            Conexion conexion = new Conexion();
+            conexion.Conectar();
+            string sConsulta = "SELECT cantidad FROM tbl_producto WHERE KidProducto = " + sIdProducto;
             OdbcDataAdapter data = new OdbcDataAdapter(sConsulta, conexion.Conectar());
             return data;
         }

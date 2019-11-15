@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BB7D59EB-38E7-4F41-AB64-0BDC6B7DBF32}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>MDI_Ventas</RootNamespace>
     <AssemblyName>MDI_Ventas</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -59,9 +59,6 @@
     </Reference>
     <Reference Include="CapaDisenoPoliza">
       <HintPath>..\..\MVC-ComisionesYPoliza\CapaDisenoPoliza\bin\Debug\CapaDisenoPoliza.dll</HintPath>
-    </Reference>
-    <Reference Include="CapaDiseno_CxC_MovClientes">
-      <HintPath>..\..\CxC_MovClientes\CapaDiseno_CxC_MovClientes\bin\Debug\CapaDiseno_CxC_MovClientes.dll</HintPath>
     </Reference>
     <Reference Include="CapaLogica">
       <HintPath>..\..\CapaLogica.dll</HintPath>

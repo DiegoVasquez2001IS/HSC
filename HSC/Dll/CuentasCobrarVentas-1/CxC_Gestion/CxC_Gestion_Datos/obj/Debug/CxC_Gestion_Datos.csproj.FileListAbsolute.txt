@@ -1,0 +1,5 @@
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ANÁLISIS DE SISTEMAS 2\CxC_Gestion\CxC_Gestion_Datos\obj\Debug\CxC_Gestion_Datos.csprojAssemblyReference.cache
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ANÁLISIS DE SISTEMAS 2\CxC_Gestion\CxC_Gestion_Datos\bin\Debug\CxC_Gestion_Datos.dll
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ANÁLISIS DE SISTEMAS 2\CxC_Gestion\CxC_Gestion_Datos\bin\Debug\CxC_Gestion_Datos.pdb
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ANÁLISIS DE SISTEMAS 2\CxC_Gestion\CxC_Gestion_Datos\obj\Debug\CxC_Gestion_Datos.dll
+C:\Users\sindy\OneDrive\Documents\ANDERSON\OCTAVO SEMESTRE\ANÁLISIS DE SISTEMAS 2\CxC_Gestion\CxC_Gestion_Datos\obj\Debug\CxC_Gestion_Datos.pdb

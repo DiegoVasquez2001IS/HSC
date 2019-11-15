@@ -49,6 +49,7 @@
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Inventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.Cbo_productos = new System.Windows.Forms.ComboBox();
             this.Txt_nombreProducto = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.Btn_addGrid = new System.Windows.Forms.Button();
@@ -76,6 +77,7 @@
             this.Txt_correlativo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Encabezado = new System.Windows.Forms.GroupBox();
+            this.Cbo_clientes = new System.Windows.Forms.ComboBox();
             this.Txt_nit = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -88,8 +90,6 @@
             this.Dtp_final = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.Dtp_actual = new System.Windows.Forms.DateTimePicker();
-            this.Cbo_clientes = new System.Windows.Forms.ComboBox();
-            this.Cbo_productos = new System.Windows.Forms.ComboBox();
             this.acciones.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -331,6 +331,16 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Producto-Servicio";
             // 
+            // Cbo_productos
+            // 
+            this.Cbo_productos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cbo_productos.FormattingEnabled = true;
+            this.Cbo_productos.Location = new System.Drawing.Point(138, 25);
+            this.Cbo_productos.Name = "Cbo_productos";
+            this.Cbo_productos.Size = new System.Drawing.Size(330, 21);
+            this.Cbo_productos.TabIndex = 21;
+            this.Cbo_productos.SelectedIndexChanged += new System.EventHandler(this.Cbo_productos_SelectedIndexChanged);
+            // 
             // Txt_nombreProducto
             // 
             this.Txt_nombreProducto.Enabled = false;
@@ -370,7 +380,6 @@
             this.Txt_precioProducto.Name = "Txt_precioProducto";
             this.Txt_precioProducto.Size = new System.Drawing.Size(137, 20);
             this.Txt_precioProducto.TabIndex = 9;
-            this.Txt_precioProducto.Text = "10.00";
             // 
             // button7
             // 
@@ -617,6 +626,16 @@
             this.Encabezado.TabStop = false;
             this.Encabezado.Text = "Cliente";
             // 
+            // Cbo_clientes
+            // 
+            this.Cbo_clientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cbo_clientes.FormattingEnabled = true;
+            this.Cbo_clientes.Location = new System.Drawing.Point(129, 19);
+            this.Cbo_clientes.Name = "Cbo_clientes";
+            this.Cbo_clientes.Size = new System.Drawing.Size(306, 21);
+            this.Cbo_clientes.TabIndex = 8;
+            this.Cbo_clientes.SelectedIndexChanged += new System.EventHandler(this.Cbo_clientes_SelectedIndexChanged);
+            // 
             // Txt_nit
             // 
             this.Txt_nit.Enabled = false;
@@ -723,26 +742,6 @@
             this.Dtp_actual.Name = "Dtp_actual";
             this.Dtp_actual.Size = new System.Drawing.Size(200, 20);
             this.Dtp_actual.TabIndex = 0;
-            // 
-            // Cbo_clientes
-            // 
-            this.Cbo_clientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cbo_clientes.FormattingEnabled = true;
-            this.Cbo_clientes.Location = new System.Drawing.Point(129, 19);
-            this.Cbo_clientes.Name = "Cbo_clientes";
-            this.Cbo_clientes.Size = new System.Drawing.Size(306, 21);
-            this.Cbo_clientes.TabIndex = 8;
-            this.Cbo_clientes.SelectedIndexChanged += new System.EventHandler(this.Cbo_clientes_SelectedIndexChanged);
-            // 
-            // Cbo_productos
-            // 
-            this.Cbo_productos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cbo_productos.FormattingEnabled = true;
-            this.Cbo_productos.Location = new System.Drawing.Point(138, 25);
-            this.Cbo_productos.Name = "Cbo_productos";
-            this.Cbo_productos.Size = new System.Drawing.Size(330, 21);
-            this.Cbo_productos.TabIndex = 21;
-            this.Cbo_productos.SelectedIndexChanged += new System.EventHandler(this.Cbo_productos_SelectedIndexChanged);
             // 
             // CU_Cotizacion
             // 

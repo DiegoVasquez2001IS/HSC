@@ -22,6 +22,7 @@ namespace Facturacion
         List<int> listaProductos = new List<int>();
         List<int> listaCotizacion = new List<int>();
         List<int> listaPedidos = new List<int>();
+        List<double> listaPorcentajes = new List<double>();
         bool encontradoCot = false;
         bool encontradoPed = false;
         string iddFactura;
@@ -29,6 +30,8 @@ namespace Facturacion
         string iddCotizacion = "NULL";
         double subtotal = 0;
         int cantidad = 0;
+        int cantidadProducto = 0;
+        double impuestoGeneral = 0;
         public CU_Facturacion()
         {
             InitializeComponent();
@@ -41,7 +44,7 @@ namespace Facturacion
             {
                 Cbo_documento.SelectedIndex = 0;
                 logicaConsulta.obtenerSerie(Cbo_serie, listaserie);
-                logicaConsulta.obtenerImpuesto(Cbo_impuestos);
+                logicaConsulta.obtenerImpuesto(Cbo_impuestos, listaPorcentajes);
                 logicaConsulta.obtenerMoneda(Cbo_moneda);
                 logicaConsulta.cargarClientes(Cbo_cliente, listaClientes);
                 logicaConsulta.cargarProductos(Cbo_prod, listaProductos);
@@ -105,7 +108,7 @@ namespace Facturacion
         }
 
         private void Nup_cantidad_ValueChanged(object sender, EventArgs e)
-        {
+        { 
             double subTotal = 0;
             subTotal = Double.Parse(Txt_precioProducto.Text) * Double.Parse(Nup_cantidad.Value.ToString());
             Txt_subtotal.Text = String.Format("{0:0.00}", subTotal);
@@ -121,64 +124,98 @@ namespace Facturacion
         {
             if (!String.IsNullOrEmpty(Txt_descProducto.Text) && !String.IsNullOrEmpty(Txt_precioProducto.Text))
             {
-                double subtotal = 0;
-                double total = 0;
-                int fila = -1;
-                int cantidad;
-                int contador = 0;
-                int codigoFactura = 0;
-                int codigoActual = Int32.Parse(listaProductos.ElementAt(Cbo_prod.SelectedIndex).ToString());
-
-                if (Dgv_factura.Rows.Count - 1 > 0)
+                if (cantidadProducto > 0 && Int32.Parse(Nup_cantidad.Value.ToString()) <= cantidadProducto)
                 {
-                    for (int i = 0; i < Dgv_factura.Rows.Count - 1; i++)
+                    double subtotal = 0;
+                    double total = 0;
+                    double impuesto = 0;
+                    int fila = -1;
+                    int cantidad;
+                    int contador = 0;
+                    int codigoFactura = 0;
+                    int codigoActual = Int32.Parse(listaProductos.ElementAt(Cbo_prod.SelectedIndex).ToString());
+
+                    if (Dgv_factura.Rows.Count - 1 > 0)
                     {
-                        codigoFactura = Int32.Parse(Dgv_factura.Rows[i].Cells[0].Value.ToString());
-                        if (codigoActual == codigoFactura)
+                        for (int i = 0; i < Dgv_factura.Rows.Count - 1; i++)
                         {
-                            fila = i;
-                            contador = 1;
+                            codigoFactura = Int32.Parse(Dgv_factura.Rows[i].Cells[0].Value.ToString());
+                            if (codigoActual == codigoFactura)
+                            {
+                                fila = i;
+                                contador = 1;
+                            }
                         }
                     }
-                }
 
-                if (contador == 0)
-                {
-                    subtotal = Double.Parse(Txt_precioProducto.Text) * Double.Parse(Nup_cantidad.Value.ToString());
-                    Dgv_factura.Rows.Add(
-                        listaProductos.ElementAt(Cbo_prod.SelectedIndex).ToString(),
-                        Nup_cantidad.Value.ToString(),
-                        Txt_descProducto.Text,
-                        Txt_precioProducto.Text,
-                        String.Format("{0:0.00}", subtotal),
-                        "-"
-                    );
+                    if (contador == 0)
+                    {
+                        subtotal = Double.Parse(Txt_precioProducto.Text) * Double.Parse(Nup_cantidad.Value.ToString());
+                        Dgv_factura.Rows.Add(
+                            listaProductos.ElementAt(Cbo_prod.SelectedIndex).ToString(),
+                            Nup_cantidad.Value.ToString(),
+                            Txt_descProducto.Text,
+                            Txt_precioProducto.Text,
+                            String.Format("{0:0.00}", subtotal),
+                            "-"
+                        );
+                    }
+                    else
+                    {
+                        cantidad = Int32.Parse(Dgv_factura.Rows[fila].Cells[1].Value.ToString()) + Int32.Parse(Nup_cantidad.Value.ToString());
+                        double subtotal2 = Double.Parse(Txt_precioProducto.Text) * cantidad;
+                        Dgv_factura.Rows[fila].Cells[1].Value = cantidad.ToString();
+                        Dgv_factura.Rows[fila].Cells[4].Value = String.Format("{0:0.00}", subtotal2);
+                    }
+
+
+                    if (Dgv_factura.Rows.Count - 1 > 0)
+                    {
+                        for (int i = 0; i < Dgv_factura.Rows.Count - 1; i++)
+                        {
+                            subtotal += Double.Parse(Dgv_factura.Rows[i].Cells[4].Value.ToString());
+                        }
+                    }
+
+                    cantidadProducto -= Int32.Parse(Nup_cantidad.Value.ToString());
+
+                    try
+                    {
+                        logicaConsulta.disminuirInventario(listaProductos.ElementAt(Cbo_prod.SelectedIndex).ToString(), Nup_cantidad.Value.ToString());
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Fallo al Actualizar Inventario", "Cotizacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    Txt_subtotalGeneral.Text = "Q. " + String.Format("{0:0.00}", subtotal);
+
+                    if (listaPorcentajes.ElementAt(Cbo_impuestos.SelectedIndex) > 0)
+                    {
+                        impuesto = subtotal * (listaPorcentajes.ElementAt(Cbo_impuestos.SelectedIndex) / 100);
+                        Txt_iva.Text = "Q. " + String.Format("{0:0.00}", impuesto);
+                    }
+                    else
+                    {
+                        impuesto = 0;
+                        Txt_iva.Text = "Q. 0.00";
+                    }
+
+                    impuestoGeneral = impuesto;
+                    total = subtotal + impuesto;
+
+                    Txt_total.Text = "Q. " + String.Format("{0:0.00}", total);
+                    int registros = Dgv_factura.Rows.Count - 1;
+                    Txt_registros.Text = registros.ToString();
                 }
                 else
                 {
-                    cantidad = Int32.Parse(Dgv_factura.Rows[fila].Cells[1].Value.ToString()) + Int32.Parse(Nup_cantidad.Value.ToString());
-                    double subtotal2 = Double.Parse(Txt_precioProducto.Text) * cantidad;
-                    Dgv_factura.Rows[fila].Cells[1].Value = cantidad.ToString();
-                    Dgv_factura.Rows[fila].Cells[4].Value = String.Format("{0:0.00}", subtotal2);
+                    MessageBox.Show("No hay producto disponible!", "Facturacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-
-                if (Dgv_factura.Rows.Count - 1 > 0)
-                {
-                    for (int i = 0; i < Dgv_factura.Rows.Count - 1; i++)
-                    {
-                        subtotal += Double.Parse(Dgv_factura.Rows[i].Cells[4].Value.ToString());
-                    }
-                }
-
-                Txt_subtotalGeneral.Text = "Q. " + String.Format("{0:0.00}", subtotal);
-                Txt_total.Text = "Q. " + String.Format("{0:0.00}", subtotal);
-                int registros = Dgv_factura.Rows.Count - 1;
-                Txt_registros.Text = registros.ToString();
             }
             else
             {
-                MessageBox.Show("Hay Campos Vacios!", "Cotizacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Hay Campos Vacios!", "Facturacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -191,6 +228,16 @@ namespace Facturacion
             {
                 cantidad = Int32.Parse(Dgv_factura.Rows[seleccionado].Cells[1].Value.ToString());
                 cantidad--;
+                cantidadProducto++;
+
+                try
+                {
+                    logicaConsulta.aumentarInventario(Dgv_factura.Rows[seleccionado].Cells[0].Value.ToString());
+                }
+                catch
+                {
+                    MessageBox.Show("Fallo al Actualizar Inventario", "Facturacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
                 if (cantidad < 1)
                 {
@@ -207,6 +254,9 @@ namespace Facturacion
                     subtotal += Double.Parse(Dgv_factura.Rows[i].Cells[4].Value.ToString());
                 }
 
+                
+
+               
                 Txt_subtotalGeneral.Text = "Q. " + String.Format("{0:0.00}", subtotal);
                 Txt_total.Text = "Q. " + String.Format("{0:0.00}", subtotal);
                 int registros = Dgv_factura.Rows.Count - 1;
@@ -214,7 +264,7 @@ namespace Facturacion
             }
             else
             {
-                MessageBox.Show("No hay filas en la Tabla!", "Cotizacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No hay filas en la Tabla!", "Facturacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -287,7 +337,7 @@ namespace Facturacion
                         iimpuesto.ToString(),
                         imoneda.ToString(),
                         "NULL",
-                        Txt_iva.Text,
+                        impuestoGeneral.ToString(),
                         subtotal.ToString()
                     );
 
@@ -315,6 +365,7 @@ namespace Facturacion
                     Txt_subtotalGeneral.Text = "Q. 0.00";
                     Txt_total.Text = "Q. 0.00";
                     Txt_registros.Text = "0";
+                    impuestoGeneral = 0;
 
                     bcliente = false;
                     bproducto = false;
@@ -423,12 +474,53 @@ namespace Facturacion
         {
             if (!String.IsNullOrEmpty(listaProductos.ElementAt(Cbo_prod.SelectedIndex).ToString()))
             {
-                bcliente = logicaConsulta.obtenerProducto(listaProductos.ElementAt(Cbo_prod.SelectedIndex).ToString(), Txt_nombreProducto, Txt_descProducto);
+                bcliente = logicaConsulta.obtenerProducto(listaProductos.ElementAt(Cbo_prod.SelectedIndex).ToString(), Txt_nombreProducto, Txt_descProducto,cantidadProducto,Txt_precioProducto);
+                cantidadProducto = logicaConsulta.obtenerCantidadProducto(listaProductos.ElementAt(Cbo_prod.SelectedIndex).ToString());
             }
             else
             {
                 MessageBox.Show("Campo Vacio!", "Facturacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void GroupBox7_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cbo_impuestos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            double total = 0;
+            double impuesto = 0;
+            subtotal = 0;
+
+            if (Dgv_factura.Rows.Count - 1 > 0)
+            {
+                for (int i = 0; i < Dgv_factura.Rows.Count - 1; i++)
+                {
+                    subtotal += Double.Parse(Dgv_factura.Rows[i].Cells[4].Value.ToString());
+                }
+            }
+            else
+            {
+                subtotal = 0;
+            }
+
+            if (listaPorcentajes.ElementAt(Cbo_impuestos.SelectedIndex) > 0)
+            {
+                impuesto = subtotal * (listaPorcentajes.ElementAt(Cbo_impuestos.SelectedIndex) / 100);
+                Txt_iva.Text = "Q. " + String.Format("{0:0.00}", impuesto);
+            }
+            else
+            {
+                impuesto = 0;
+                Txt_iva.Text = "Q. 0.00";
+            }
+
+            impuestoGeneral = impuesto;
+            Txt_subtotalGeneral.Text = "Q. " + String.Format("{0:0.00}", subtotal);
+            total = subtotal + impuesto;
+            Txt_total.Text = "Q. " + String.Format("{0:0.00}", total);
         }
     }
 }

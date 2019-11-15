@@ -58,7 +58,9 @@ namespace MDI_CuentasPorCobrar
 
         private void CuentasPorCobrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            CuentasXC cuentas = new CuentasXC();
+            cuentas.MdiParent = this;
+            cuentas.Show();
         }
 
         private void PolizasToolStripMenuItem_Click(object sender, EventArgs e)

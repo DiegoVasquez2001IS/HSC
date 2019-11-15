@@ -127,13 +127,12 @@ namespace CapaLogica_Facturacion
             }
         }
 
-        public void obtenerImpuesto(ComboBox comboBox)
+        public void obtenerImpuesto(ComboBox comboBox, List<double> listaImpuestos)
         {
             Sentencias sentencias = new Sentencias();
             OdbcDataAdapter datos = sentencias.cargarImpuestos();
             DataTable dtDatos = new DataTable();
             datos.Fill(dtDatos);
-            comboBox.Items.Add("Sin Impuesto");
 
             if (dtDatos.Rows.Count > 0)
             {
@@ -141,6 +140,7 @@ namespace CapaLogica_Facturacion
                 {
                     DataRow row = dtDatos.Rows[i];
                     comboBox.Items.Add(row["nombre_impuesto"].ToString());
+                    listaImpuestos.Add( Double.Parse( row["porcentaje_impuesto"].ToString()));
                 }
             }
             else
@@ -210,7 +210,7 @@ namespace CapaLogica_Facturacion
             }
         }
 
-        public bool obtenerProducto(string sIdProducto, TextBox nombre, TextBox descripcion)
+        public bool obtenerProducto(string sIdProducto, TextBox nombre, TextBox descripcion, int cantidad, TextBox precio)
         {
             bool encontrado = false;
             Sentencias sentencias = new Sentencias();
@@ -224,8 +224,10 @@ namespace CapaLogica_Facturacion
                     DataRow row = dtDatos.Rows[i];
                     nombre.Text = row["nombre_producto"].ToString();
                     descripcion.Text = row["descripcion_producto"].ToString();
+                    precio.Text = row["precio"].ToString();
                 }
-                encontrado = true;            }
+                encontrado = true;
+            }
             else
             {
                 MessageBox.Show("Error al Obtener Producto", "Facturacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -649,6 +651,42 @@ namespace CapaLogica_Facturacion
             {
                 MessageBox.Show("Error al Obtener Cotizaciones!", "Facturacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public void disminuirInventario(string idProducto, string cantidad)
+        {
+            Sentencias sentencias = new Sentencias();
+            OdbcCommand command = sentencias.disminuirInventario(idProducto, cantidad);
+            command.ExecuteNonQuery();
+        }
+
+        public void aumentarInventario(string idProducto)
+        {
+            Sentencias sentencias = new Sentencias();
+            OdbcCommand command = sentencias.aumentarInventario(idProducto);
+            command.ExecuteNonQuery();
+        }
+
+        public int obtenerCantidadProducto(string idProducto)
+        {
+            int cantidad = 0;
+            Sentencias sentencias = new Sentencias();
+            OdbcDataAdapter datos = sentencias.obtenerCantidadProducto(idProducto);
+            DataTable dtDatos = new DataTable();
+            datos.Fill(dtDatos);
+            if (dtDatos.Rows.Count > 0)
+            {
+                for (int i = 0; i < dtDatos.Rows.Count; i++)
+                {
+                    DataRow row = dtDatos.Rows[i];
+                    cantidad = Int32.Parse(row["cantidad"].ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("Error al Obtener Cantidad Productos!", "Facturacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return cantidad;
         }
     }
 }

@@ -59,6 +59,9 @@
     <Reference Include="CapaLogica">
       <HintPath>..\..\CapaLogica.dll</HintPath>
     </Reference>
+    <Reference Include="CxC_Gestion">
+      <HintPath>..\..\CxC_Gestion\CxC_Gestion\bin\Debug\CxC_Gestion.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -77,6 +80,12 @@
     </Compile>
     <Compile Include="Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasXC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CuentasXC.Designer.cs">
+      <DependentUpon>CuentasXC.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -112,6 +121,9 @@
     </Compile>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CuentasXC.resx">
+      <DependentUpon>CuentasXC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

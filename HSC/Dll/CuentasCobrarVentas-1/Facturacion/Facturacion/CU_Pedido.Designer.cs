@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.Cbo_codCot = new System.Windows.Forms.ComboBox();
             this.Txt_fecha = new System.Windows.Forms.TextBox();
@@ -59,6 +59,7 @@
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Inventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gpb_producto = new System.Windows.Forms.GroupBox();
+            this.Cbo_codProducto = new System.Windows.Forms.ComboBox();
             this.Txt_nombreProducto = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.Txt_addGrid = new System.Windows.Forms.Button();
@@ -86,6 +87,7 @@
             this.Txt_correlativo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Encabezado = new System.Windows.Forms.GroupBox();
+            this.Cbo_cliente = new System.Windows.Forms.ComboBox();
             this.Txt_nit = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -98,8 +100,6 @@
             this.Dtp_final = new System.Windows.Forms.DateTimePicker();
             this.label21 = new System.Windows.Forms.Label();
             this.Dtp_actual = new System.Windows.Forms.DateTimePicker();
-            this.Cbo_cliente = new System.Windows.Forms.ComboBox();
-            this.Cbo_codProducto = new System.Windows.Forms.ComboBox();
             this.groupBox19.SuspendLayout();
             this.Gpb_acciones.SuspendLayout();
             this.Gpb_venta.SuspendLayout();
@@ -367,14 +367,14 @@
             this.Inventario});
             this.Dgv_factura.Location = new System.Drawing.Point(6, 19);
             this.Dgv_factura.Name = "Dgv_factura";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_factura.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_factura.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_factura.Size = new System.Drawing.Size(945, 159);
             this.Dgv_factura.TabIndex = 0;
             this.Dgv_factura.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_factura_CellClick);
@@ -444,6 +444,16 @@
             this.Gpb_producto.TabStop = false;
             this.Gpb_producto.Text = "Producto-Servicio";
             // 
+            // Cbo_codProducto
+            // 
+            this.Cbo_codProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cbo_codProducto.FormattingEnabled = true;
+            this.Cbo_codProducto.Location = new System.Drawing.Point(138, 25);
+            this.Cbo_codProducto.Name = "Cbo_codProducto";
+            this.Cbo_codProducto.Size = new System.Drawing.Size(330, 21);
+            this.Cbo_codProducto.TabIndex = 23;
+            this.Cbo_codProducto.SelectedIndexChanged += new System.EventHandler(this.Cbo_codProducto_SelectedIndexChanged);
+            // 
             // Txt_nombreProducto
             // 
             this.Txt_nombreProducto.Enabled = false;
@@ -483,7 +493,6 @@
             this.Txt_precioProducto.Name = "Txt_precioProducto";
             this.Txt_precioProducto.Size = new System.Drawing.Size(137, 20);
             this.Txt_precioProducto.TabIndex = 9;
-            this.Txt_precioProducto.Text = "7.55";
             // 
             // button7
             // 
@@ -729,6 +738,16 @@
             this.Encabezado.TabStop = false;
             this.Encabezado.Text = "Cliente";
             // 
+            // Cbo_cliente
+            // 
+            this.Cbo_cliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cbo_cliente.FormattingEnabled = true;
+            this.Cbo_cliente.Location = new System.Drawing.Point(124, 22);
+            this.Cbo_cliente.Name = "Cbo_cliente";
+            this.Cbo_cliente.Size = new System.Drawing.Size(306, 21);
+            this.Cbo_cliente.TabIndex = 22;
+            this.Cbo_cliente.SelectedIndexChanged += new System.EventHandler(this.Cbo_cliente_SelectedIndexChanged);
+            // 
             // Txt_nit
             // 
             this.Txt_nit.Enabled = false;
@@ -835,26 +854,6 @@
             this.Dtp_actual.Name = "Dtp_actual";
             this.Dtp_actual.Size = new System.Drawing.Size(200, 20);
             this.Dtp_actual.TabIndex = 6;
-            // 
-            // Cbo_cliente
-            // 
-            this.Cbo_cliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cbo_cliente.FormattingEnabled = true;
-            this.Cbo_cliente.Location = new System.Drawing.Point(124, 22);
-            this.Cbo_cliente.Name = "Cbo_cliente";
-            this.Cbo_cliente.Size = new System.Drawing.Size(306, 21);
-            this.Cbo_cliente.TabIndex = 22;
-            this.Cbo_cliente.SelectedIndexChanged += new System.EventHandler(this.Cbo_cliente_SelectedIndexChanged);
-            // 
-            // Cbo_codProducto
-            // 
-            this.Cbo_codProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cbo_codProducto.FormattingEnabled = true;
-            this.Cbo_codProducto.Location = new System.Drawing.Point(138, 25);
-            this.Cbo_codProducto.Name = "Cbo_codProducto";
-            this.Cbo_codProducto.Size = new System.Drawing.Size(330, 21);
-            this.Cbo_codProducto.TabIndex = 23;
-            this.Cbo_codProducto.SelectedIndexChanged += new System.EventHandler(this.Cbo_codProducto_SelectedIndexChanged);
             // 
             // CU_Pedido
             // 

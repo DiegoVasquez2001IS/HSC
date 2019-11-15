@@ -80,7 +80,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Cbo_listaPrecios = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.Cbo_impuestos = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.Cbo_moneda = new System.Windows.Forms.ComboBox();
             this.Gpb_encabezado = new System.Windows.Forms.GroupBox();
@@ -100,6 +99,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Txt_nombres = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.Cbo_impuestos = new System.Windows.Forms.ComboBox();
             this.groupBox19.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -521,7 +521,6 @@
             this.Txt_precioProducto.Name = "Txt_precioProducto";
             this.Txt_precioProducto.Size = new System.Drawing.Size(137, 20);
             this.Txt_precioProducto.TabIndex = 9;
-            this.Txt_precioProducto.Text = "4.25";
             // 
             // button7
             // 
@@ -621,10 +620,10 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.Cbo_impuestos);
             this.groupBox7.Controls.Add(this.label6);
             this.groupBox7.Controls.Add(this.Cbo_listaPrecios);
             this.groupBox7.Controls.Add(this.label19);
-            this.groupBox7.Controls.Add(this.Cbo_impuestos);
             this.groupBox7.Controls.Add(this.label18);
             this.groupBox7.Controls.Add(this.Cbo_moneda);
             this.groupBox7.ForeColor = System.Drawing.Color.White;
@@ -634,6 +633,7 @@
             this.groupBox7.TabIndex = 29;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Configuracion";
+            this.groupBox7.Enter += new System.EventHandler(this.GroupBox7_Enter);
             // 
             // label6
             // 
@@ -661,15 +661,6 @@
             this.label19.TabIndex = 18;
             this.label19.Text = "Impuestos:";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Cbo_impuestos
-            // 
-            this.Cbo_impuestos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Cbo_impuestos.FormattingEnabled = true;
-            this.Cbo_impuestos.Location = new System.Drawing.Point(26, 77);
-            this.Cbo_impuestos.Name = "Cbo_impuestos";
-            this.Cbo_impuestos.Size = new System.Drawing.Size(155, 21);
-            this.Cbo_impuestos.TabIndex = 17;
             // 
             // label18
             // 
@@ -858,6 +849,16 @@
             this.label1.Text = "Nombres:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Cbo_impuestos
+            // 
+            this.Cbo_impuestos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cbo_impuestos.FormattingEnabled = true;
+            this.Cbo_impuestos.Location = new System.Drawing.Point(26, 80);
+            this.Cbo_impuestos.Name = "Cbo_impuestos";
+            this.Cbo_impuestos.Size = new System.Drawing.Size(156, 21);
+            this.Cbo_impuestos.TabIndex = 21;
+            this.Cbo_impuestos.SelectedIndexChanged += new System.EventHandler(this.Cbo_impuestos_SelectedIndexChanged);
+            // 
             // CU_Facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -939,7 +940,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox Cbo_listaPrecios;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox Cbo_impuestos;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox Cbo_moneda;
         private System.Windows.Forms.GroupBox Gpb_encabezado;
@@ -967,5 +967,6 @@
         private System.Windows.Forms.ComboBox Cbo_doc;
         private System.Windows.Forms.ComboBox Cbo_cliente;
         private System.Windows.Forms.ComboBox Cbo_prod;
+        private System.Windows.Forms.ComboBox Cbo_impuestos;
     }
 }
