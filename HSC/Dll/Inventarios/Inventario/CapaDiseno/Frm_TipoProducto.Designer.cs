@@ -47,7 +47,7 @@
             this.Controls.Add(this.navegador1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Frm_TipoProducto";
-            this.Text = "Frm_TipoProducto";
+            this.Text = "TipoProducto";
             this.Load += new System.EventHandler(this.Frm_TipoProducto_Load);
             this.ResumeLayout(false);
 
